@@ -1,148 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin | Cybersecurity Portfolio</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0d1117;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: #161b22;
-            padding: 40px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-            color: #58a6ff;
-        }
-
-        header p {
-            font-size: 18px;
-            color: #c9d1d9;
-        }
-
-        section {
-            padding: 40px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        h2 {
-            color: #58a6ff;
-            border-bottom: 2px solid #30363d;
-            padding-bottom: 10px;
-        }
-
-        .project {
-            background: #161b22;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        a {
-            color: #58a6ff;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #161b22;
-            margin-top: 40px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin | Cybersecurity & IT Portfolio</title>
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #070b14;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
+    header {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        radial-gradient(circle at top, rgba(0, 150, 255, .25), transparent 35%),
+        linear-gradient(135deg, #07111f, #0b1020 55%, #05070d);
+    }
+    .hero {
+      max-width: 900px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid #2f81f7;
+      border-radius: 999px;
+      color: #58a6ff;
+      background: rgba(88,166,255,.08);
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 56px;
+      margin: 10px 0;
+      color: #ffffff;
+    }
+    .highlight { color: #58a6ff; }
+    .subtitle {
+      font-size: 22px;
+      color: #c9d1d9;
+      max-width: 750px;
+      margin: auto;
+    }
+    .buttons {
+      margin-top: 30px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: #238636;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid #58a6ff;
+      color: #58a6ff;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(13,17,23,.95);
+      border-bottom: 1px solid #30363d;
+      padding: 14px;
+      text-align: center;
+      z-index: 10;
+    }
+    nav a {
+      color: #c9d1d9;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { color: #58a6ff; }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 24px;
+    }
+    h2 {
+      font-size: 34px;
+      color: #58a6ff;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: linear-gradient(180deg, #161b22, #0d1117);
+      border: 1px solid #30363d;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      transition: transform .2s, border-color .2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #58a6ff;
+    }
+    .card h3 {
+      color: #ffffff;
+      margin-top: 0;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(88,166,255,.12);
+      color: #79c0ff;
+      padding: 5px 9px;
+      border-radius: 8px;
+      font-size: 13px;
+      margin: 4px 4px 0 0;
+    }
+    .timeline {
+      border-left: 3px solid #238636;
+      padding-left: 22px;
+    }
+    .timeline div {
+      margin-bottom: 24px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #30363d;
+      background: #0d1117;
+      color: #8b949e;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Jeff Radkins</h1>
-    <p>Cybersecurity & IT Portfolio</p>
+  <div class="hero">
+    <div class="badge">Cybersecurity • IT Support • Network Security</div>
+    <h1>Hi, I'm <span class="highlight">Kevin</span></h1>
+    <p class="subtitle">
+      Entry-level cybersecurity and IT professional focused on network defense,
+      vulnerability assessment, IDS/IPS systems, technical troubleshooting, and hands-on lab environments.
+    </p>
+    <div class="buttons">
+      <a class="btn" href="#projects">View Projects</a>
+      <a class="btn secondary" href="#contact">Contact Me</a>
+    </div>
+  </div>
 </header>
 
-<section>
-    <h2>About Me</h2>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#research">Research</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <p>
-        Entry-level cybersecurity professional with a Master's degree in Cybersecurity,
-        hands-on experience building virtual security labs, configuring IDS/IPS systems,
-        analyzing network traffic, and researching advanced network scanning techniques.
-    </p>
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am building a career in cybersecurity and information technology with a strong interest in
+    network security, defensive monitoring, vulnerability scanning, incident response fundamentals,
+    and system administration. My background includes academic cybersecurity research, hands-on
+    virtual labs, technical troubleshooting, and practical experience working with tools such as
+    pfSense, Snort, Kali Linux, Wireshark, Nmap, Windows, Linux, and VirtualBox.
+  </p>
 </section>
 
-<section>
-    <h2>Technical Skills</h2>
-
-    <ul>
-        <li>pfSense Firewall</li>
-        <li>Snort IDS/IPS</li>
-        <li>Kali Linux</li>
-        <li>Wireshark</li>
-        <li>Nmap</li>
-        <li>VirtualBox</li>
-        <li>Windows & Linux Administration</li>
-        <li>Networking Fundamentals</li>
-        <li>Python</li>
-        <li>Security+</li>
-    </ul>
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Cybersecurity</h3>
+      <span class="tag">Security+</span>
+      <span class="tag">IDS/IPS</span>
+      <span class="tag">Vulnerability Scanning</span>
+      <span class="tag">Threat Detection</span>
+    </div>
+    <div class="card">
+      <h3>Networking</h3>
+      <span class="tag">TCP/IP</span>
+      <span class="tag">Firewalls</span>
+      <span class="tag">pfSense</span>
+      <span class="tag">Wireshark</span>
+    </div>
+    <div class="card">
+      <h3>Tools & Platforms</h3>
+      <span class="tag">Kali Linux</span>
+      <span class="tag">Snort</span>
+      <span class="tag">Nmap</span>
+      <span class="tag">VirtualBox</span>
+    </div>
+    <div class="card">
+      <h3>IT Support</h3>
+      <span class="tag">Windows</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Troubleshooting</span>
+      <span class="tag">Documentation</span>
+    </div>
+  </div>
 </section>
 
-<section>
-    <h2>Projects</h2>
-
-    <div class="project">
-        <h3>Advanced Network Scanning Detection Lab</h3>
-
-        <p>
-            Built a cybersecurity lab environment using pfSense, Snort, Kali Linux,
-            and Windows virtual machines to analyze stealth scanning techniques,
-            intrusion detection, and firewall logging.
-        </p>
+<section id="projects">
+  <h2>Featured Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>pfSense + Snort IDS/IPS Lab</h3>
+      <p>
+        Built a virtual cybersecurity lab using pfSense, Snort, Kali Linux, and Windows hosts
+        to test firewall rules, scan detection, IDS alerts, and network segmentation.
+      </p>
+      <span class="tag">pfSense</span>
+      <span class="tag">Snort</span>
+      <span class="tag">Kali Linux</span>
+      <span class="tag">VirtualBox</span>
     </div>
 
-    <div class="project">
-        <h3>Machine Learning Network Traffic Analysis</h3>
-
-        <p>
-            Researched machine learning techniques for anomaly detection in network traffic,
-            including traffic classification, IDS enhancement, and behavioral analysis.
-        </p>
+    <div class="card">
+      <h3>Advanced Network Scanning Detection</h3>
+      <p>
+        Researched and tested active scanning, stealth scanning, evasion techniques,
+        firewall logging, and defensive detection strategies using cybersecurity lab tools.
+      </p>
+      <span class="tag">Nmap</span>
+      <span class="tag">Network Security</span>
+      <span class="tag">IDS</span>
     </div>
 
-    <div class="project">
-        <h3>Mobile Data Forensics Research</h3>
-
-        <p>
-            Conducted research into challenges law enforcement faces when extracting
-            and analyzing data from encrypted mobile devices.
-        </p>
+    <div class="card">
+      <h3>Machine Learning for Network Anomaly Detection</h3>
+      <p>
+        Researched how machine learning can improve network traffic analysis,
+        anomaly detection, and intrusion detection beyond traditional signature-based tools.
+      </p>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Anomaly Detection</span>
+      <span class="tag">Network Traffic</span>
     </div>
+
+    <div class="card">
+      <h3>Mobile Data Forensics Research</h3>
+      <p>
+        Studied challenges law enforcement faces when collecting mobile evidence,
+        including encryption, privacy concerns, cybercrime, and modern forensic limitations.
+      </p>
+      <span class="tag">Digital Forensics</span>
+      <span class="tag">Mobile Security</span>
+      <span class="tag">Research</span>
+    </div>
+  </div>
 </section>
 
-<section>
-    <h2>Contact</h2>
+<section id="research">
+  <h2>Research & Academic Work</h2>
+  <div class="timeline">
+    <div>
+      <h3>Authentication, Access Control, and Authorization Policy</h3>
+      <p>
+        Researched security policy challenges in the medical field, focusing on privacy,
+        protected information, access control, and authorization risks.
+      </p>
+    </div>
+    <div>
+      <h3>Risk Management in Distributed Software Development</h3>
+      <p>
+        Analyzed risk management strategies for distributed teams, including communication,
+        project planning, security concerns, and software development challenges.
+      </p>
+    </div>
+    <div>
+      <h3>Network Traffic Analysis and Anomaly Detection</h3>
+      <p>
+        Examined how machine learning and IDS technologies can support stronger detection
+        of abnormal behavior within network environments.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <p>Email: your-email@example.com</p>
-
-    <p>GitHub:
-        <a href="https://github.com/TheCodeMeisterr">
-            github.com/TheCodeMeisterr
-        </a>
-    </p>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    I am interested in entry-level IT, cybersecurity, SOC analyst, technical support,
+    network security, and security analyst opportunities.
+  </p>
+  <p>Email: <strong>your-email@example.com</strong></p>
+  <p>GitHub: <a href="https://github.com/TheCodeMeisterr" style="color:#58a6ff;">github.com/TheCodeMeisterr</a></p>
 </section>
 
 <footer>
-    <p>© 2026 Jeff </p>
+  <p>© 2026 Kevin | Cybersecurity & IT Portfolio</p>
 </footer>
 
 </body>
