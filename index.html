@@ -311,6 +311,132 @@
     max-width: 700px;
     margin: 10px auto;
   }
+    /* Section variety */
+section:nth-of-type(even) {
+  background: linear-gradient(180deg, rgba(88,166,255,0.025), transparent);
+  border-radius: 24px;
+}
+
+/* Stronger section headers */
+section h2 {
+  position: relative;
+  display: inline-block;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 3px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, #58a6ff, transparent);
+  border-radius: 999px;
+}
+
+/* Alternate card styles */
+#skills .card {
+  border-left: 4px solid #58a6ff;
+}
+
+#projects .card {
+  background:
+    radial-gradient(circle at top right, rgba(35,134,54,0.12), transparent 35%),
+    linear-gradient(180deg, #161b22, #0d1117);
+}
+
+#papers .card {
+  border-top: 4px solid #58a6ff;
+}
+
+#homelab .card {
+  background:
+    linear-gradient(135deg, rgba(88,166,255,0.08), transparent 45%),
+    #111820;
+}
+
+#gallery .gallery-card {
+  border-bottom: 4px solid #238636;
+}
+
+#goals .card {
+  background:
+    radial-gradient(circle at bottom left, rgba(88,166,255,0.10), transparent 40%),
+    #111820;
+}
+
+/* Make featured projects feel more premium */
+#projects .card h3::before {
+  content: "▸ ";
+  color: #58a6ff;
+}
+
+/* Make homelab cards feel technical */
+#homelab .card h3::before {
+  content: "◇ ";
+  color: #7ee787;
+}
+
+/* Badge improvements */
+.badge {
+  box-shadow: 0 0 25px rgba(88,166,255,0.18);
+  letter-spacing: 0.3px;
+}
+
+/* Tag variety */
+.tag:nth-child(odd) {
+  background: rgba(88,166,255,0.14);
+}
+
+.tag:nth-child(even) {
+  background: rgba(35,134,54,0.12);
+  color: #7ee787;
+}
+
+/* Unique hero glow */
+header::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(88,166,255,0.18), transparent 65%);
+  top: 12%;
+  right: 8%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+/* Better nav hover */
+nav a {
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  background: rgba(88,166,255,0.10);
+}
+
+/* More unique terminal */
+.terminal {
+  border-left: 5px solid #7ee787;
+}
+
+/* Softer page depth */
+body {
+  background:
+    radial-gradient(circle at top left, rgba(88,166,255,0.08), transparent 30%),
+    #070b14;
+}
   </style>
   
 </head>
