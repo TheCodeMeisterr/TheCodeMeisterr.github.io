@@ -183,15 +183,76 @@
     box-shadow: 0 15px 40px rgba(88,166,255,0.15);
   }
   
-  .placeholder-box {
-    border: 1px dashed #58a6ff;
-    border-radius: 12px;
-    padding: 28px;
-    text-align: center;
-    color: #79c0ff;
-    margin-bottom: 16px;
-    background: rgba(88,166,255,0.05);
-  }
+  .lab-visual {
+  height: 150px;
+  border: 1px solid rgba(88,166,255,.55);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at center, rgba(88,166,255,.16), transparent 55%),
+    linear-gradient(135deg, rgba(88,166,255,.08), rgba(35,134,54,.06));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lab-visual::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(88,166,255,.45);
+  border-radius: 10px;
+}
+
+.visual-nodes {
+  display: flex;
+  gap: 12px;
+  z-index: 1;
+  align-items: center;
+}
+
+.visual-node {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(13,17,23,.9);
+  border: 1px solid #58a6ff;
+  color: #79c0ff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.visual-line {
+  width: 26px;
+  height: 2px;
+  background: #58a6ff;
+  z-index: 1;
+}
+
+.visual-terminal {
+  z-index: 1;
+  font-family: Consolas, monospace;
+  color: #7ee787;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.visual-chart {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  height: 80px;
+  z-index: 1;
+}
+
+.visual-bar {
+  width: 18px;
+  background: #58a6ff;
+  border-radius: 6px 6px 0 0;
+  opacity: .8;
+}
   
   /* Signature network diagram */
   .network-map {
@@ -652,7 +713,15 @@ IT support, and network defense.
   <div class="gallery-grid">
 
     <div class="gallery-card">
-      <div class="placeholder-box">pfSense Firewall Lab Screenshot</div>
+      <div class="lab-visual">
+  <div class="visual-nodes">
+    <div class="visual-node">WAN</div>
+    <div class="visual-line"></div>
+    <div class="visual-node">pfSense</div>
+    <div class="visual-line"></div>
+    <div class="visual-node">LAN</div>
+  </div>
+</div>
       <h3>Firewall & Network Segmentation</h3>
       <p>
         Lab work involving pfSense firewall configuration, LAN/WAN separation,
@@ -664,7 +733,13 @@ IT support, and network defense.
     </div>
 
     <div class="gallery-card">
-      <div class="placeholder-box">Snort IDS Alert Screenshot</div>
+      <div class="lab-visual">
+  <div class="visual-terminal">
+    [ALERT] Port scan detected<br>
+    [SRC] Kali Linux<br>
+    [IDS] Snort monitoring active
+  </div>
+</div>
       <h3>IDS/IPS Monitoring</h3>
       <p>
         Detection-focused lab work involving Snort alerts, scan activity,
@@ -676,7 +751,15 @@ IT support, and network defense.
     </div>
 
     <div class="gallery-card">
-      <div class="placeholder-box">Wireshark Packet Capture</div>
+          <div class="lab-visual">
+      <div class="visual-chart">
+        <div class="visual-bar" style="height:35px;"></div>
+        <div class="visual-bar" style="height:70px;"></div>
+        <div class="visual-bar" style="height:45px;"></div>
+        <div class="visual-bar" style="height:80px;"></div>
+        <div class="visual-bar" style="height:55px;"></div>
+      </div>
+    </div>
       <h3>Packet Analysis</h3>
       <p>
         Network troubleshooting and protocol inspection using packet captures
@@ -688,7 +771,15 @@ IT support, and network defense.
     </div>
 
     <div class="gallery-card">
-      <div class="placeholder-box">Virtual Lab Topology</div>
+          <div class="lab-visual">
+      <div class="visual-nodes">
+        <div class="visual-node">Kali</div>
+        <div class="visual-line"></div>
+        <div class="visual-node">Firewall</div>
+        <div class="visual-line"></div>
+        <div class="visual-node">Windows</div>
+      </div>
+    </div>
       <h3>Virtualization Environment</h3>
       <p>
         Virtual machine environments built with VirtualBox and VMware for testing
@@ -700,7 +791,15 @@ IT support, and network defense.
     </div>
 
     <div class="gallery-card">
-      <div class="placeholder-box">Packet Tracer Network Diagram</div>
+      <div class="lab-visual">
+  <div class="visual-nodes">
+    <div class="visual-node">Switch</div>
+    <div class="visual-line"></div>
+    <div class="visual-node">Router</div>
+    <div class="visual-line"></div>
+    <div class="visual-node">VLAN</div>
+  </div>
+</div>
       <h3>Cisco Packet Tracer Labs</h3>
       <p>
         Networking labs focused on VLANs, subnetting, routing concepts,
@@ -712,7 +811,13 @@ IT support, and network defense.
     </div>
 
     <div class="gallery-card">
-      <div class="placeholder-box">Local AI / LM Studio Screenshot</div>
+      <div class="lab-visual">
+  <div class="visual-terminal">
+    local_model_loaded=true<br>
+    inference_engine=LM Studio<br>
+    ai_workflow=active
+  </div>
+</div>
       <h3>Local AI & Machine Learning</h3>
       <p>
         Experimentation with LM Studio, local language models, TensorFlow,
